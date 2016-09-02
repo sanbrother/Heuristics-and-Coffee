@@ -31,7 +31,7 @@ public class HardwareEmulator {
 								status = HardwareStatus.values()[statusIndex];
 							}
 						} catch (NumberFormatException e) {
-							e.printStackTrace();
+							/* ignore */
 						}
 						
 						if (status != HardwareStatus.HardwareStatusInvalid)
