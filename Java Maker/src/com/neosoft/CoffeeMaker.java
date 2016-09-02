@@ -1,10 +1,11 @@
 package com.neosoft;
 
+import com.neosoft.util.IMessageQueue;
 import com.neosoft.util.Message;
 import com.neosoft.util.MessageQueue;
 
 public class CoffeeMaker implements IHardwareStatusListener {
-	private final MessageQueue queue = new MessageQueue();
+	private final IMessageQueue queue = new MessageQueue();
 	
 	public void run()
 	{

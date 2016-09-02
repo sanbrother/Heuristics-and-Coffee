@@ -2,7 +2,7 @@ package com.neosoft.util;
 
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class MessageQueue {
+public class MessageQueue implements IMessageQueue {
 	private final LinkedBlockingQueue<Message> messages = new LinkedBlockingQueue<>(64);
 	
 	public boolean post(final Message message) {
