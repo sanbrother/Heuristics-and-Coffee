@@ -13,7 +13,7 @@ public class CoffeeMaker implements IHardwareStatusListener {
 		
 		while ((message = queue.get()) != null)
 		{
-			System.out.println("Message ID = " + message.getMessageID());
+			System.out.println("Hardware status changed : " + message.getExtra().toString());
 		}
 	}
 
@@ -24,7 +24,10 @@ public class CoffeeMaker implements IHardwareStatusListener {
 			return;
 		}
 		
-		this.queue.post(new Message(status.ordinal()));
+		Message message = new Message(Message.MESSAGE_ID_HARDWARE_STATUS_CHANGED);
+		message.setExtra(status);
+		
+		this.queue.post(message);
 	}
 
 }

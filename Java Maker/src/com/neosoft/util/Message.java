@@ -1,6 +1,8 @@
 package com.neosoft.util;
 
 public class Message {
+	public final static int MESSAGE_ID_HARDWARE_STATUS_CHANGED = 1;
+
 	private final int messageID;
 	private Object extra = null;
 

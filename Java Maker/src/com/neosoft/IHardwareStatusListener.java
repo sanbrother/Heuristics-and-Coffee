@@ -6,5 +6,6 @@ public interface IHardwareStatusListener {
 		HardwareStatusBoilerEmpty,
 		HardwareStatusBoilerNotEmpty
 	}
+
 	void OnHardwareStatusChanged(HardwareStatus status);
 }

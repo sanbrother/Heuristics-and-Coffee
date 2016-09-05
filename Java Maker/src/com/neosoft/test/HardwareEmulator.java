@@ -1,7 +1,8 @@
-package com.neosoft;
+package com.neosoft.test;
 
 import java.util.Scanner;
 
+import com.neosoft.IHardwareStatusListener;
 import com.neosoft.IHardwareStatusListener.HardwareStatus;
 
 public class HardwareEmulator {
